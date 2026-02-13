@@ -27,11 +27,15 @@
 <img src="photo3.jpg">
 </div>
 
-<button onclick="reveal()">Open when you miss me</button>
+<button onclick="playMusic(); openLetter()">Open when you miss me</button>
 
-<p id="hiddenMessage">
-No distance has ever made you feel far.
-You are still my home.
+<p id="letter" style="display:none; max-width:600px; margin:auto; margin-top:20px;">
+My love,  
+Despite the distance, you're the closest to my heart.
+Every moment spent with you is special to me.
+  Thanks for being the calm to my chaos babe, I'm super grateful for you,
+  forever and ever and ever !!!! 
+  Happy Valentine's Day , my oldie❤️
 </p>
 
 <audio autoplay loop>
@@ -42,5 +46,31 @@ You are still my home.
 
 <script src="script.js"></script>
 
-</body>
+ <script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.innerHTML = "❤️";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.top = "-10px";
+  heart.style.fontSize = "20px";
+  heart.style.animation = "fall 5s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+<style>
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+9</body>
 </html>
