@@ -29,13 +29,12 @@
 
 <button onclick="reveal()">Open when you miss me</button>
 
-<p id="letter" style="display:none; max-width:600px; margin:auto; margin-top:20px;">
-My love,  
-Despite the distance, you're the closest to my heart.
-Every moment spent with you is special to me.
-  Thanks for being the calm to my chaos babe, I'm super grateful for you,
-  forever and ever and ever !!!! 
-  Happy Valentine's Day , my oldie❤️
+<button onclick="reveal()">Open when you miss me ❤️</button>
+
+<p id="hiddenMessage" style="display:none; font-size:20px; margin-top:20px; color:pink;">
+Even with miles between us, nothing has changed.
+I still find you in every little moment.
+You are, and always will be, my home.
 </p>
 
 <audio autoplay loop>
@@ -63,6 +62,10 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
+   function reveal() {
+var msg = document.getElementById("hiddenMessage");
+msg.style.display = "block";
+   }
 </script>
 
 <style>
@@ -72,5 +75,5 @@ setInterval(createHeart, 300);
   }
 }
 </style>
-9</body>
+</body>
 </html>
